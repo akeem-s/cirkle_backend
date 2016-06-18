@@ -3,6 +3,7 @@ class CreateBids < ActiveRecord::Migration
     create_table :bids do |t|
     	t.references :user, null: false
     	t.references :item, null: false
+    	t.boolean :winner, null: false
 
       t.timestamps null: false
     end
