@@ -1,4 +1,6 @@
 class BidsController < ApplicationController
+	#again, authorize login before allowing them to place bids
+	before_filter :authorize
 	#bids index also only available for admin to see macro data
 	def index
 	end
