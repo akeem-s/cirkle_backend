@@ -1,4 +1,9 @@
 <h1>Welcome to Cirkle!</h1>
 
-<%= link_to 'Login', login_path %>
-<%= link_to 'Register', signup_path %>
+<% if current_user %>
+	<%= link_to 'Log Out', logout_path %>
+	<h3>Hi, <%= current_user.username %></h3>
+<% else %>
+	<%= link_to 'Login', login_path %>
+	<%= link_to 'Register', signup_path %>
+<% end %>
